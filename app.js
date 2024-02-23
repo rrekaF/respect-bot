@@ -4,8 +4,15 @@ import { InteractionType, InteractionResponseType } from "discord-interactions";
 import { VerifyDiscordRequest } from "./utils.js";
 import { setAllRespect, getTargets, checkTargetExists, addTarget, setRespect, addRespect, subRespect, removeTarget } from "./logic.js";
 
-const app = express();
+/**
+ * TODO:
+ * - Better looking responses (especially get-targets)
+ * - Maybe an actual DB instead of a JSON file
+ * - Update bot's pfp and name
+ * - Look for bugs
+ */
 
+const app = express();
 const PORT = 3000;
 
 app.use(express.json({ verify: VerifyDiscordRequest(process.env.PUBLIC_KEY) }));
